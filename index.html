@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Writer's Help</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+ <header>
+    <h1>Writer's Help</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="characters.html">Characters</a>
+      <a href="plot.html">Plot Planner</a>
+    </nav>
+  </header>
+  <main>
+    <h2>Welcome, Writer!</h2>
+    <p>Use this tool to build characters, plan your plots, and bring your story to life.</p>
+
+    <label for="genre">Choose your writing genre:</label>
+    <select id="genre">
+      <option value="default">Default</option>
+      <option value="fantasy">Fantasy</option>
+      <option value="scifi">Sci-Fi</option>
+      <option value="romance">Romance</option>
+      <option value="mystery">Mystery</option>
+      <option value="horror">Horror</option>
+      <option value="thriller">Thriller</option>
+      <option value="historical">Historical</option>
+      <option value="adventure">Adventure</option>
+      <option value="western">Western</option>
+      <option value="nonfiction">Non-Fiction</option>
+      <option value="youngadult">Young Adult</option>
+      <option value="children">Children</option>
+    </select>
+
+    <label for="subgenre">Choose a subgenre:</label>
+    <select id="subgenre">
+      <!-- Fantasy subgenres -->
+      <option value="high-fantasy" data-parent="fantasy">High Fantasy</option>
+      <option value="urban-fantasy" data-parent="fantasy">Urban Fantasy</option>
+      <option value="dark-fantasy" data-parent="fantasy">Dark Fantasy</option>
+      <option value="fairy-tale" data-parent="fantasy">Fairy Tale</option>
+      <option value="heroic" data-parent="fantasy">Heroic</option>
+
+      <!-- Sci-Fi subgenres -->
+      <option value="space-opera" data-parent="scifi">Space Opera</option>
+      <option value="dystopian" data-parent="scifi">Dystopian</option>
+      <option value="cyberpunk" data-parent="scifi">Cyberpunk</option>
+      <option value="time-travel" data-parent="scifi">Time Travel</option>
+      <option value="steampunk" data-parent="scifi">Steampunk</option>
+
+      <!-- Romance subgenres -->
+      <option value="historical-romance" data-parent="romance">Historical Romance</option>
+      <option value="contemporary-romance" data-parent="romance">Contemporary Romance</option>
+      <option value="paranormal-romance" data-parent="romance">Paranormal Romance</option>
+      <option value="romantic-suspense" data-parent="romance">Romantic Suspense</option>
+
+      <!-- Mystery subgenres -->
+      <option value="cozy-mystery" data-parent="mystery">Cozy Mystery</option>
+      <option value="detective" data-parent="mystery">Detective</option>
+      <option value="noir" data-parent="mystery">Noir</option>
+      <option value="legal-thriller" data-parent="mystery">Legal Thriller</option>
+
+      <!-- Horror subgenres -->
+      <option value="psychological-horror" data-parent="horror">Psychological Horror</option>
+      <option value="gothic-horror" data-parent="horror">Gothic Horror</option>
+      <option value="slasher" data-parent="horror">Slasher</option>
+      <option value="occult" data-parent="horror">Occult</option>
+
+      <!-- Thriller subgenres -->
+      <option value="spy-thriller" data-parent="thriller">Spy Thriller</option>
+      <option value="techno-thriller" data-parent="thriller">Techno-Thriller</option>
+      <option value="medical-thriller" data-parent="thriller">Medical Thriller</option>
+
+      <!-- Historical subgenres -->
+      <option value="historical-fiction" data-parent="historical">Historical Fiction</option>
+      <option value="biographical" data-parent="historical">Biographical</option>
+
+      <!-- Adventure subgenres -->
+      <option value="survival" data-parent="adventure">Survival</option>
+      <option value="treasure-hunt" data-parent="adventure">Treasure Hunt</option>
+
+      <!-- Western subgenres -->
+      <option value="classic-western" data-parent="western">Classic Western</option>
+      <option value="weird-western" data-parent="western">Weird Western</option>
+
+      <!-- Non-Fiction subgenres -->
+      <option value="memoir" data-parent="nonfiction">Memoir</option>
+      <option value="self-help" data-parent="nonfiction">Self-Help</option>
+      <option value="true-crime" data-parent="nonfiction">True Crime</option>
+
+      <!-- Young Adult subgenres -->
+      <option value="ya-fantasy" data-parent="youngadult">YA Fantasy</option>
+      <option value="ya-romance" data-parent="youngadult">YA Romance</option>
+
+      <!-- Children subgenres -->
+      <option value="picture-book" data-parent="children">Picture Book</option>
+      <option value="middle-grade" data-parent="children">Middle Grade</option>
+    </select>
+
+      <label for="audience">Choose an audience:</label>
+    <select id="audience">
+      <option value="general">General</option>
+      <option value="adult">Adult</option>
+      <option value="young-adult">Young Adult</option>
+      <option value="middle-grade">Middle Grade</option>
+      <option value="children">Children</option>
+    </select>
+  </main>
+  <footer>
+    <p>&copy; 2025 Writer's Help</p>
+  </footer>
+  <script src="scripts/theme.js"></script>
+</body>
+</html>

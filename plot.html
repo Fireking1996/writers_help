@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Plot Planner</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Plot Planner</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="characters.html">Characters</a>
+      <a href="plot.html">Plot Planner</a>
+    </nav>
+  </header>
+  <main>
+    <form id="plotForm">
+      <input type="text" id="plotTitle" placeholder="Plot Point Title" required>
+      <textarea id="plotDetails" placeholder="Describe the event..." required></textarea>
+      <button type="submit">Add Plot Point</button>
+    </form>
+
+    <section id="plotList">
+      <h2>Story Plot</h2>
+      <ul></ul>
+    </section>
+  </main>
+  <script src="scripts/plots.js"></script>
+</body>
+</html>

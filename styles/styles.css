@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Creepster&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&family=Oxanium:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Water+Brush&display=swap');
+
+/* Base styles */
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  color: #000000;
+  transition: background 0.5s ease, color 0.5s ease;
+  margin: 0;
+  padding: 0;
+}
+
+/* Genre Themes */
+body.genre-fantasy {
+  background: linear-gradient(#f5f5dc, #d4af37);
+  color: #2e2b2b;
+}
+
+body.genre-scifi {
+  background-color: #0b0c10;
+  color: #66fcf1;
+}
+
+body.genre-romance {
+  background: #ffe6e6;
+  color: #b30059;
+}
+
+body.genre-mystery {
+  background: #1c1c1c;
+  color: #f5f5f5;
+}
+
+body.genre-horror {
+  background: #1a0000;
+  color: #ff4d4d;
+}
+
+body.genre-thriller {
+  background: #000000;
+  color: #ffcc00;
+}
+
+body.genre-historical {
+  background: #f4e8d8;
+  color: #5a4637;
+}
+
+body.genre-adventure {
+  background: #e0ffe0;
+  color: #004d00;
+}
+
+body.genre-western {
+  background: #deb887;
+  color: #3e2f1c;
+}
+
+body.genre-nonfiction {
+  background: #f0f0f0;
+  color: #1a1a1a;
+}
+
+body.genre-youngadult {
+  background: #e6f0ff;
+  color: #003366;
+}
+
+body.genre-children {
+  background: #fffacd;
+  color: #ff6347;
+}
+
+/* Audience Themes */
+body.audience-general {
+  font-size: 16px;
+}
+
+body.audience-adult {
+  font-family: Georgia, serif;
+  font-size: 18px;
+}
+
+body.audience-young-adult {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body.audience-middle-grade {
+  font-family: "Comic Sans MS", cursive;
+  font-size: 15px;
+}
+
+body.audience-children {
+  font-family: "Comic Sans MS", cursive;
+  font-size: 14px;
+  background-color: #ffeaa7;
+  color: #2d3436;
+}
+/* Subgenre Themes with Mood Adjustments */
+body.subgenre-high-fantasy {
+  background-image: linear-gradient(to right, #e0c3fc, #8ec5fc);
+  color: #3e2f2f;
+}
+
+body.subgenre-urban-fantasy {
+  background: linear-gradient(to right, #2f2f2f, #434343);
+  color: #f1f1f1;
+}
+
+body.subgenre-dark-fantasy {
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  color: #ff6b6b;
+}
+
+body.subgenre-fairy-tale {
+  background: linear-gradient(to right, #ffe3ec, #ffc7c7);
+  color: #4e342e;
+}
+
+body.subgenre-heroic {
+  background: linear-gradient(to right, #f2d974, #f29f05);
+  color: #3c2f2f;
+}
+
+body.subgenre-picture-book {
+  background: linear-gradient(to right, #fdfd96, #ffb347);
+  color: #2d3436;
+}
+
+body.subgenre-middle-grade {
+  background: linear-gradient(to right, #dcd6f7, #a6b1e1);
+  color: #2d3436;
+}
+
+/* Genre + Subgenre Mood Mixes */
+body.genre-fantasy.subgenre-dark-fantasy {
+  background: linear-gradient(to right, #1a001a, #330033);
+  color: #ffd6e0;
+}
+
+body.genre-romance.subgenre-fairy-tale {
+  background: linear-gradient(to right, #fff0f5, #ffc0cb);
+  color: #880e4f;
+}
+
+body.genre-children.subgenre-picture-book {
+  background: linear-gradient(to right, #fff9c4, #ffd54f);
+  color: #5d4037;
+}
+
+body.genre-adventure.subgenre-heroic {
+  background: linear-gradient(to right, #e6e600, #ff8c00);
+  color: #2d1b00;
+}
+
+body.genre-scifi.subgenre-urban-fantasy {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #c4f0ff;
+}
+/* Ensure text contrast remains strong */
+body, label, select, p, h1, h2 {
+  text-shadow: 0 0 2px #fff, 0 0 5px #000;
+}
+
+select, label {
+  display: block;
+  margin: 1em 0;
+  padding: 0.5em;
+  background: #fff;
+  color: #000;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
