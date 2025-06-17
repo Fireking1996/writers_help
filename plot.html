@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <title>Plot Planner</title>
   <link rel="stylesheet" href="styles/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: false });</script>
 </head>
 <body>
   <header>
@@ -14,16 +16,51 @@
       <a href="plot.html">Plot Planner</a>
     </nav>
   </header>
-  <main>
+   <main>
+    <!-- Genre & Subgenre Selectors -->
+    <section id="genreSelection" style="margin-bottom: 1em;">
+      <label for="genre">Genre:</label>
+      <select id="genre">
+        <option value="default">--Select Genre--</option>
+        <option value="fantasy">Fantasy</option>
+        <option value="scifi">Science Fiction</option>
+        <option value="romance">Romance</option>
+        <option value="mystery">Mystery</option>
+        <option value="horror">Horror</option>
+        <option value="thriller">Thriller</option>
+        <option value="historical">Historical</option>
+        <option value="adventure">Adventure</option>
+        <option value="western">Western</option>
+        <option value="nonfiction">Nonfiction</option>
+        <option value="youngadult">Young Adult</option>
+        <option value="children">Children</option>
+      </select>
+
+      <label for="subgenre">Subgenre:</label>
+      <select id="subgenre">
+        <option value="">--Select Subgenre--</option>
+      </select>
+    </section>
+
+    <!-- Plot Form -->
     <form id="plotForm">
-      <input type="text" id="plotTitle" placeholder="Plot Point Title" required>
+      <input type="text" id="plotTitle" placeholder="Plot Point Title" required />
       <textarea id="plotDetails" placeholder="Describe the event..." required></textarea>
       <button type="submit">Add Plot Point</button>
     </form>
 
+    <!-- Plot List -->
     <section id="plotList">
       <h2>Story Plot</h2>
       <ul></ul>
+    </section>
+
+    <!-- Flowchart Section -->
+    <section id="flowchartSection" style="margin-top: 2em;">
+      <h2>Genre-Specific Flowchart</h2>
+      <div id="flowchart" class="mermaid" style="background: #f9f9f9; padding: 1em; border-radius: 8px; min-height: 300px;">
+        Select a genre and subgenre to see the flowchart.
+      </div>
     </section>
   </main>
   <script src="scripts/plots.js"></script>
