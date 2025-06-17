@@ -27,7 +27,6 @@ plotForm.addEventListener('submit', function (e) {
 
 loadPlots();
 
-
 // ---------------------------
 // Genre & Subgenre Flowchart
 // ---------------------------
