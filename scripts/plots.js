@@ -228,9 +228,17 @@ function updateFlowchart() {
   const genre = genreSelect.value;
   const subgenre = subgenreSelect.value;
 
-  if (flowcharts[genre] && flowcharts[genre][subgenre]) {
-    flowchartDiv.textContent = flowcharts[genre][subgenre];
-    mermaid.init(undefined, flowchartDiv);
+  flowchartDiv.innerHTML = '';
+
+  if (flowcharts[genre]) {
+    if (subgenre && flowcharts[genre][subgenre]) {
+      // Render subgenre flowchart
+      mermaid.render(`mermaid-${genre}-${subgenre}`, flowcharts[genre][subgenre], (svgCode) => {
+        flowchartDiv.innerHTML = svgCode;
+      });
+    } else {
+      flowchartDiv.textContent = 'Select a subgenre to see the flowchart.';
+    }
   } else {
     flowchartDiv.textContent = 'Select a genre and subgenre to see the flowchart.';
   }
@@ -240,5 +248,5 @@ function updateFlowchart() {
 genreSelect.addEventListener('change', populateSubgenres);
 subgenreSelect.addEventListener('change', updateFlowchart);
 
-// Initialize subgenres on page load
+// Initialize subgenres and flowchart on page load
 populateSubgenres();
