@@ -1,15 +1,113 @@
+/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Creepster&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&family=Oxanium:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Water+Brush&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Creepster&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&family=Oxanium:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Water+Brush&display=swap');
-
-/* Base styles */
+/* Base Styles */
 body {
-  font-family: Arial, sans-serif;
-  background: #ffffff;
-  color: #000000;
-  transition: background 0.5s ease, color 0.5s ease;
+  font-family: 'Open Sans', Arial, sans-serif;
+  background: #fff;
+  color: #000;
   margin: 0;
-  padding: 0;
+  padding: 1rem 2rem;
+  transition: background 0.6s ease, color 0.6s ease;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* Headings */
+h1, h2 {
+  font-family: 'Cinzel', serif;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+h2 {
+  font-weight: 600;
+  margin-top: 2rem;
+}
+
+/* Navigation */
+header {
+  background-color: #222;
+  color: #eee;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  margin: 0;
+  font-family: 'Water Brush', cursive;
+  font-size: 1.8rem;
+}
+
+nav a {
+  color: #eee;
+  margin-left: 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #f4d03f;
+}
+
+/* Main Content */
+main {
+  max-width: 720px;
+  margin: 2rem auto 4rem;
+  padding: 0 1rem;
+}
+
+/* Paragraph */
+p {
+  font-size: 1.125rem;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  color: #444;
+}
+
+/* Form Elements */
+label {
+  display: block;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-family: 'Poppins', sans-serif;
+  color: inherit;
+}
+
+select {
+  width: 100%;
+  max-width: 320px;
+  padding: 0.5rem 0.75rem;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+select:focus {
+  border-color: #f4d03f;
+  box-shadow: 0 0 8px #f4d03faa;
+  outline: none;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  color: #777;
+  border-top: 1px solid #ddd;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* === Default Theme === */
@@ -20,7 +118,7 @@ body.default-theme {
 
 /* === Genre Themes === */
 body.genre-fantasy {
-  background: linear-gradient(#f5f5dc, #d4af37);
+  background: linear-gradient(135deg, #f5f5dc 0%, #d4af37 100%);
   color: #2e2b2b;
 }
 
@@ -141,7 +239,7 @@ body.subgenre-middle-grade {
   color: #2d3436;
 }
 
-/* === Combined Genre + Subgenre === */
+/* === Combined Genre + Subgenre (Examples) === */
 body.genre-fantasy.subgenre-dark-fantasy {
   background: linear-gradient(to right, #1a001a, #330033);
   color: #ffd6e0;
@@ -167,23 +265,12 @@ body.genre-scifi.subgenre-urban-fantasy {
   color: #c4f0ff;
 }
 
-/* === Text Styling === */
+/* Text shadows for readability */
 body, label, select, p, h1, h2 {
   text-shadow: 0 0 2px #fff, 0 0 5px #000;
 }
 
-/* === Form Elements === */
-select, label {
-  display: block;
-  margin: 1em 0;
-  padding: 0.5em;
-  background: #fff;
-  color: #000;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-}
-
-/* === Optional: Hide subgenres by default (JS overrides this) === */
-#subgenre option {
+/* Hide subgenre options by default; JS handles visibility */
+#subgenre {
   display: none;
 }
