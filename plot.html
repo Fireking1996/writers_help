@@ -9,6 +9,8 @@
     rel="stylesheet"
   />
   <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
 </head>
 <body>
   <header>
@@ -72,7 +74,31 @@
       Select a genre and subgenre to see the flowchart.
     </div>
   </section>
+  <section id="publishing-guide">
+  <h2>Publishing Options</h2>
+  <p>Not sure whether to self-publish or pursue traditional publishing? Use this checklist to explore your path.</p>
+  <button onclick="toggleChecklist()">Show/Hide Checklist</button>
+
+  <div id="publishingChecklist" style="display: none; margin-top: 1em;">
+    <h3>Self-Publishing: Is it for you?</h3>
+    <ul>
+      <li>You want full creative control over your book</li>
+      <li>You’re willing to handle or hire for editing, cover design, and marketing</li>
+      <li>You want faster publication (days/weeks, not months/years)</li>
+      <li>You’re comfortable managing or learning publishing platforms (e.g., Amazon KDP)</li>
+    </ul>
+
+    <h3>Traditional Publishing: Is it your goal?</h3>
+    <ul>
+      <li>You want access to professional editors, designers, and marketers</li>
+      <li>You’re willing to wait and submit to agents or publishers</li>
+      <li>You prefer a structured publishing timeline and wide bookstore access</li>
+      <li>You’re prepared for potential rejection and revision cycles</li>
+    </ul>
+  </div>
+</section>
+
   </main>
-  <script src="scripts/plots.js"></script>
+  <script src="scripts/main.js"></script>
 </body>
 </html>
