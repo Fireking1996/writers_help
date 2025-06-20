@@ -204,9 +204,11 @@ body.audience-children {
 }
 
 /* === Subgenre Themes === */
-body.subgenre-high-fantasy {
-  background-image: linear-gradient(to right, #e0c3fc, #8ec5fc);
-  color: #3e2f2f;
+body.genre-fantasy.subgenre-high-fantasy {
+  background: url('../images/high_fantasy.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  text-shadow: 0 0 10px #000;
 }
 
 body.subgenre-urban-fantasy {
